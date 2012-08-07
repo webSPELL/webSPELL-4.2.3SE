@@ -1,0 +1,58 @@
+<form action="index.php?site=joinus&amp;action=save" method="post" name="post">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr>
+    <td class="title" align="left" bgcolor="$bghead"><b>%joinus_form%</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <center>$showerror</center>
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%nick%:</td>
+        <td><input name="nick" value="$nick" type="text" /></td>
+        <td align="right">%name%:</td>
+        <td><input name="name" value="$name" type="text" /></td>
+      </tr>
+      <tr>
+        <td align="right">%street%:</td>
+        <td><input name="street" value="$age" type="text" /></td>
+        <td align="right">%city%:</td>
+        <td><input name="city" value="$city" type="text" /></td>
+      </tr>
+      <tr>
+        <td align="right">%mail%:</td>
+        <td><input name="email" value="$email" type="text" /></td>
+        <td align="right">%icq_msn%:</td>
+        <td><input name="messenger" value="$messenger" type="text" /></td>
+      </tr>
+      <tr>
+        <td align="right">%age%:</td>
+        <td><input name="age" value="$age" size="2" type="text" /></td>
+        <td align="right"></td>
+        <td></td>
+      </tr>
+      <tr><td colspan="4">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">%additional_info%:</td>
+        <td colspan="3"><textarea name="info" cols="60" rows="5">$info</textarea></td>
+      </tr>
+      <tr bgcolor="$bg1"> 
+        <td  align="left" bgcolor="$bg1">%security_code%:</td>
+        <td bgcolor="$bg1">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="left">$captcha</td>
+        <td><input type="text" name="captcha" size="10" />
+        <input name="captcha_hash" type="hidden" value="$hash" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input name="post" type="submit" value="%send%" /></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

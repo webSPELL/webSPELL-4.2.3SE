@@ -1,0 +1,179 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('nickname').value == "") {
+		alert("%you_have_to_nickname%");
+		document.getElementById('nickname').focus();
+   		return false;
+	}
+
+	if(document.getElementById('usernamenew').value == "") {
+		alert("%you_have_to_username%");
+		document.getElementById('usernamenew').focus();
+   		return false;
+	}
+
+	if(document.getElementById('firstname').value == "") {
+		alert("%you_have_to_firstname%");
+		document.getElementById('firstname').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_day').value < 1 || document.getElementById('b_day').value > 31) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_day').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_month').value < 1 || document.getElementById('b_month').value > 12) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_month').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_year').value < 1900 || document.getElementById('b_year').value > 2050) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_year').focus();
+		return false;
+	}
+
+}
+-->
+</script>
+
+<form method="post" name="post" action="index.php?site=myprofile" enctype="multipart/form-data" onsubmit="return chkFormular()">
+<center>$showerror</center>
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title"><b>%profile-info%</b></td>
+  </tr>
+  <tr>
+    <td width="22%" align="right" bgcolor="$bg1">%nickname%:*</td>
+    <td width="78%" bgcolor="$bg1"><input type="text" name="nickname" id="nickname" value="$nickname" maxlength="30" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%username%:*</td>
+    <td bgcolor="$bg1"><input name="usernamenew" type="text" id="usernamenew" value="$username" maxlength="30" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%password%:</td>
+    <td bgcolor="$bg1"><a href="index.php?site=myprofile&amp;action=editpwd">%edit_password%</a></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%e-mail%:*</td>
+    <td bgcolor="$bg1">$email</td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1"></td>
+    <td bgcolor="$bg1"><a href="index.php?site=myprofile&amp;action=editmail">%edit_mail%</a></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1" valign="top">$viewavatar</td>
+    <td bgcolor="$bg1"><input name="avatar" type="file" size="30" />
+    <input class="input" name="delavatar" type="checkbox" value="1" />
+    <small>%delete_max_90_90%</small><br />%or%<br />
+    <input name="avatar_url" type="text" size="30" value="http://" /></td>
+  </tr>
+  <tr bgcolor="$bg4">
+    <td align="right" bgcolor="$bg1" valign="top">$viewpic</td>
+    <td bgcolor="$bg1"><input name="userpic" type="file" size="30" />
+    <input class="input" name="deluserpic" type="checkbox" value="1" />
+    <small>%delete_max_230_210%</small><br />%or%<br />
+    <input name="userpic_url" type="text" size="30" value="http://" /></td>
+  </tr>
+  <tr>
+    <td align="right" valign="top" bgcolor="$bg1">%signature%:</td>
+    <td bgcolor="$bg1"><textarea name="usertext" cols="70" rows="5" style="width:100%">$usertext</textarea></td>
+  </tr>
+</table>  
+<br />
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">  
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title"><b>%personal-info%</b></td>
+  </tr>
+  <tr>
+    <td width="22%" align="right" bgcolor="$bg1">%first_name%:*</td>
+    <td width="78%" bgcolor="$bg1"><input type="text" name="firstname" id="firstname" value="$firstname" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%last_name%:</td>
+    <td bgcolor="$bg1"><input type="text" name="lastname" value="$lastname" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%date_of_birth%:*</td>
+    <td bgcolor="$bg1"><input type="text" name="b_day" id="b_day" value="$b_day" size="2" />
+    .
+    <input type="text" name="b_month" id="b_month" value="$b_month" size="2" />
+    .
+    <input type="text" name="b_year" id="b_year" value="$b_year" size="4" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%sexuality%:</td>
+    <td bgcolor="$bg1"><select name="sex">$sex</select></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%country%:</td>
+    <td bgcolor="$bg1"><select name="flag" onchange="document.getElementById('county').src='images/flags/'+this.options[this.selectedIndex].value+'.gif'">$countries</select> $country</td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%postcode% / %town%:</td>
+    <td bgcolor="$bg1"><input type="text" name="postcode" size="10" value="$postcode" /> <input type="text" name="town" size="30" value="$town" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%street% / %streetnr%:</td>
+    <td bgcolor="$bg1"><input type="text" name="street" size="30" value="$street" /> <input type="text" name="streetnr" size="10" value="$streetnr" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%tel%:</td>
+    <td bgcolor="$bg1"><input type="text" name="tel" size="30" value="$tel" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%fax%:</td>
+    <td bgcolor="$bg1"><input type="text" name="fax" size="30" value="$fax" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%mobile%:</td>
+    <td bgcolor="$bg1"><input type="text" name="mobile" size="30" value="$mobile" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">Icq#:</td>
+    <td bgcolor="$bg1"><input type="text" name="icq" value="$icq" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg3">
+    <td align="right" bgcolor="$bg1">%homepage%:</td>
+    <td bgcolor="$bg1"><input type="text" name="homepage" value="$homepage" size="30" maxlength="255" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" valign="top" bgcolor="$bg1">%about_myself%:<br /><br />
+    <small><b>%options%:</b><br />%html%<br />%bbcode%<br />%smilies%</small></td>
+    <td bgcolor="$bg1"><textarea name="messageabout" cols="70" rows="8" style="width:100%">$about</textarea></td>
+  </tr>
+</table>  
+<br />
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">  
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title"><b>%options%</b></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td width="22%" align="right" bgcolor="$bg1">%newsletter%</td>
+    <td width="78%" bgcolor="$bg1"><select name="newsletter">$newsletter</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%language%</td>
+    <td bgcolor="$bg1"><select name="language">$langdirs</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%mail_on_new_pm%</td>
+    <td bgcolor="$bg1"><select name="pm_mail">$pm_mail</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%hide_e-mail%</td>
+    <td bgcolor="$bg1"><input type="checkbox" name="mail_hide" value="1"$email_hide /></td>
+  </tr><tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%private_data_hide%</td>
+    <td bgcolor="$bg1"><input type="checkbox" name="private_data_hide" value="1"$private_data_hide /></td>
+  </tr>
+</table>
+<br />
+<div style="width: 100%; text-align: right;"><input type="submit" name="submit" value="%update_profile%" /><br /><br />%fields_star_required%</div>
+</form>

@@ -1,0 +1,42 @@
+<form action="index.php?site=newsletter&amp;action=save" method="post" name="newsletter_register">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title" colspan="3"><b>%register_newsletter%</b></td>
+  </tr>
+  <tr bgcolor="$bg1">
+    <td bgcolor="$bg1" width="30%">%your_mail_adress%:</td>
+    <td bgcolor="$bg1"><input name="email" type="text" value="$usermail" size="24" /></td>
+    <td bgcolor="$bg1" align="center" width="20%"><input name="post" type="submit" value="%submit%" />
+    </td>
+  </tr>
+</table>
+</form>
+<br />
+<form action="index.php?site=newsletter&amp;action=delete" method="post" name="newsletter_delete">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title" colspan="4"><b>%del_from_mail_list%</b></td>
+  </tr>
+  <tr bgcolor="$bg1">
+    <td bgcolor="$bg1" width="30%">%your_mail_adress%:</td>
+    <td bgcolor="$bg1"><input name="email" type="text" value="$get_mail" size="24" onfocus="this.value=''" /></td>
+    <td bgcolor="$bg1"><input name="password" type="text" value="$get_pw" size="14" onfocus="this.value=''" /></td>
+    <td bgcolor="$bg1" align="center" width="20%"><input name="post" type="submit" value="%delete%" />
+    </td>
+  </tr>
+</table>
+</form>
+<br />
+<form action="index.php?site=newsletter&amp;action=forgot" method="post" name="newsletter_forgot">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title" colspan="3"><b>%lost_deletion_key%</b></td>
+  </tr>
+  <tr bgcolor="$bg1">
+    <td bgcolor="$bg1" width="30%">%your_mail_adress%</td>
+    <td bgcolor="$bg1"><input name="email" type="text" value="$get_mail" size="24" onfocus="this.value=''" /></td>
+    <td bgcolor="$bg1" align="center" width="20%"><input name="post" type="submit" value="%send%" />
+    </td>
+  </tr>
+</table>
+</form>

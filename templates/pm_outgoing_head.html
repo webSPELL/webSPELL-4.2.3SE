@@ -1,0 +1,28 @@
+<div align="left">
+<table cellpadding="5" cellspacing="1" bgcolor="$pagebg">
+  <tr>
+    <td bgcolor="$bg2"><a class="titlelink" href="index.php?site=messenger">%incoming%</a></td>
+    <td bgcolor="$bg1"><b>&nbsp;%outgoing%&nbsp;</b></td>
+    <td bgcolor="$bg2"><a class="titlelink" href="index.php?site=messenger&amp;action=newmessage">%new_message%</a></td>
+  </tr>
+</table>
+</div>
+<br />
+<form method="post" action="index.php?site=messenger&amp;action=outgoing">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>$sorter $page_link</td>
+    <td align="right">%messages_per_page% <input type="text" name="entries" size="2" value="$max" />
+    <input type="submit" value="%show%" /></td>
+  </tr>
+</table>
+</form>
+<form method="post" name="form" action="messenger.php">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bgcat">
+    <td class="title" align="center" width="20">&nbsp;</td>
+    <td class="title"><b>%message%</b></td>
+    <td class="title" align="center"><b>%receptionist%</b></td>
+    <td class="title" align="center"><b>%date%</b></td>
+  </tr>
+  

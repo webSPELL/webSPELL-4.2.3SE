@@ -1,0 +1,399 @@
+##########################################################################
+#                                                                        #
+#           Version 4       /                        /   /               #
+#          -----------__---/__---__------__----__---/---/-               #
+#           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
+#          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
+#                       Free Content / Management System                 #
+#                                   /                                    #
+#                                                                        #
+#                                                                        #
+#   Copyright 2005-2011 by webspell.org                                  #
+#                                                                        #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#                                                                        #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
+#                                                                        #
+#   visit webspell.org                                                   #
+#                                                                        #
+##########################################################################
+
+##########################################################################
+#                                                                        #
+#           Version 4       /                        /   /               #
+#          -----------__---/__---__------__----__---/---/-               #
+#           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
+#          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
+#                            Society / Edition                           #
+#                                   /                                    #
+#                                                                        #
+#   modified by webspell|k3rmit (Stefan Giesecke) in 2009                #
+#                                                                        #
+#   - Modifications are released under the GNU GENERAL PUBLIC LICENSE    #
+#   - It is NOT allowed to remove this copyright-tag                     #
+#   - http://www.fsf.org/licensing/licenses/gpl.html                     #
+#                                                                        #
+##########################################################################
+
+### webspell 4.2.3a (2011-09-10) changeset 47:2e09882a7a5c
+
+* (all or a lot of files/folders):
+  - changed copyright date
+
+* admin/admincenter.php:
+  - changed footer copyright date
+
+* admin/contact.php:
+  - security fix
+
+* admin/languages/de/page_statistic.php:
+  - spelling correction
+  
+* admin/page_statistic.php
+  - bugfix for InnoDB
+  
+* admin/rubrics.php:
+  - spelling correction in url
+  
+* admin/sponsors.php:
+  - spelling correction in url
+
+* admin/squads.php:
+  - security fix
+
+* admin/static.php:
+  - fixed access groups get lost after edit
+  
+* admin/users.php:
+  - security fix  
+
+* calendar.php:
+  - W3C validity inreased
+  
+* files.php:
+  - security fix
+  
+* getlang.php
+  - escape language var
+  - fixed linebreaks in language vars
+
+* guestbook.php:
+  - security fix
+  
+* install/functions.php:
+  - removed type from create table, because deprecated since mysql4
+  
+* install/step03.php
+  - lang var fixed
+  
+* images/squadicons/index.php:
+  - added redirect index
+  
+* js/bbcode.js:
+  - fixed autoresize bug
+  
+* languages/de/whoisonline.php:
+  - language varaibles renamed
+  
+* languages/uk/seo.php:
+  - fixed language variable
+  
+* languages/uk/whoisonline.php:
+  - language varaibles renamed
+  
+* messenger.php:
+  - allow whitespace in comma separated receiver list
+  - security fix
+  - fixed message sending
+
+* myprofile.php:
+  - security fix
+
+* news.php:
+  - renamed counter variable
+
+* newsletter.php:
+  - security fix
+
+* poll.php:
+  - fixed multiple voting
+  
+* polls.php:
+  - fixed multiple voting
+  
+* profile.php:
+  - fixed age for people older than 99 years
+    
+* readme.de.txt:
+  - removed /demos/ instructions
+  
+* readme.en.txt:
+  - removed /demos/ instructions
+
+* src/func/bbcode.php
+  - fixed display bug in chrome browser with quotes
+
+* src/func/captcha.php:
+  - fixed possible math captcha result 0
+  
+* src/func/feeds.php:
+  - pubDate is now the date of the latest news
+  
+* src/seo.php:
+  - change website title when language is changed on news
+  
+* templates/* (all or a lot of files):
+  - replaced static border colors
+  
+* templates/pm_new.html
+  - layout fix  
+  
+* templates/result.html
+  - deleted
+  
+* templates/upcoming_date_details.html:
+  - W3C validity inreased
+  
+* version.php:
+  - increased version numbering
+ 
+
+### webspell 4.2.2a ( 2010-02-28 ) rev.430 (new svn server)
+
+* (all or a lot of files/folders):
+  - changed copyright notice
+
+* _functions.php:
+  - performance optimizations
+  - check ban expiring every hour instead of every day
+  - fixed ban removement
+  - added usage of $GLOBALS['ip']
+  - fixed url validation
+  
+* _settings.php:
+  - security fix: added usage of security_slashes($_REQUEST)
+  
+* admin/boards.php:
+  - fixed removing of shadow topics on board deletions
+  
+* admin/languages/*/squads.php:
+  - removed unused language keys
+  
+* admin/languages/uk/modules.php
+  - fixed spelling
+  
+* admin/modules.php:
+  - fixed usage of database translations after adding a new language
+
+* admin/modules_boxed.php:
+  - fixed usage of database translations after adding a new language
+  
+* admin/navigation.php:
+  - fixed usage of database translations after adding a new language
+  
+* admin/page_statistics.php:
+  - removed E_STRICT/E_DEPRECATED error
+  - fixed query failed, if db name contains special characters
+  - fixed display of all tables
+  
+* admin/registerfields.php:
+  - fixed usage of database translations after adding a new language
+  
+* admin/squads.php:
+  - removed size limitations for squad pics/icons
+  - using IMAGETYPE constants instead of their values
+  
+* admin/users.php:
+  - replaced mysql_query with safe_query
+  
+* articles.php:
+  - replaced mysql_query with safe_query
+  
+* asearch.php:
+  - security fix: fixed sql injection possibility
+  - limited template usage
+  
+* calendar.php:
+  - fixed empty lines in the calendar
+  - fixed unlimited amount of registering to an event
+  
+* comments.php:
+  - added usage of $GLOBALS['ip']
+  - fixed non translated strings
+  - added language variables
+  - fixed w3c validation error
+  
+* contact.php:
+  - security fix: fixed possibility to send messages to any email addresses
+  - added usage of $GLOBALS['ip']
+  
+* data.php:
+  - fixed spelling
+  
+* forum.php:
+  - removed double load of language files
+  - removed double declared counter variable
+  
+* forum_topic.php:
+  - fixed possibility to save topics without a name
+  - fixed forum ranks
+  - fixed sticky topic feature
+  - removed unused language variables
+  
+* guestbook.php:
+  - added usage of $GLOBALS['ip']
+  - fixed w3c validation error
+  
+* install/index.php:
+  - removed unused code
+  - removed unused language keys
+  
+* install/functions.php:
+  - fixed wrong default website title
+  
+* install/languages/*/index.php
+  - removed unused language keys
+  
+* install/step*.php:
+  - removed language selection flags
+  - fixed alignment of steps
+  
+* install/step01.php:
+  - replaced character > with &gt;
+  
+* install/step03.php:
+  - replaced character > with &gt;
+  
+* install/style.css:
+  - fixed alignment of steps
+  
+* js/bbcode.js:
+  - added additional special characters to the bbcode checkers searchregexp
+  
+* languages/*/comments.php:
+  - added language variables
+  
+* languages/*/contact.php:
+  - security fix: fixed possibility to send messages to any email addresses
+  
+* languages/*/forum.php:
+  - removed unused language variables
+  
+* languages/*/latesttopics.php:
+  - added language variables
+  
+* languages/*/rating.php:
+  - fixed rating error messages
+  
+* languages/*/register.php:
+  - fixed possibility to register if you are allready logged in
+  - added language variables
+  
+* languages/de/countries.php:
+  - fixed spelling
+  
+* languages/uk/articles.php:
+  - fixed spelling
+  
+* languages/uk/calendar.php:
+  - fixed spelling
+  
+* languages/uk/counter.php:
+  - fixed spelling
+  
+* languages/uk/register.php:
+  - fixed spelling
+  
+* latesttopics.php:
+  - added language variables
+  
+* myprofile.php:
+  - fixed default language selection
+  
+* news.php:
+  - fixed news headlines if they contain a username
+  
+* out.php:
+  - fixed adding of "http://"
+  
+* partners.php:
+  - added possibility of text partners instead of images only
+  
+* profile.php:
+  - added usage of $GLOBALS['ip']
+  - replaced mysql_query with safe_query
+  - fixed forum ranks
+
+* rating.php:
+  - fixed rating error messages
+  
+* register.php:
+  - fixed possibility to register if you are allready logged in
+  - added language variables
+  
+* sc_headlines.php:
+  - fixed rubric usage
+  
+* search.php:
+  - added strtolower to article title tests
+  
+* shoutbox_content.php:
+  - security fix: fixed sql injection possibility
+  - added usage of $GLOBALS['ip']
+  
+* sponsors.php:
+  - fixed adding of "http://"
+  
+* src/func/bbcode.php:
+  - fixed img tag replace
+  - fixed png image info
+  - fixed disabling of img resizing
+  - added form tag to htmlml
+  - fixed url replacement
+  
+* src/seo.php:
+  - fixed SEO title for server.php
+  
+* templates/addbbcode.html:
+  - fixed selectors
+  
+* templates/comments_add_visitor.html:
+  - added id="post" to the form tag
+  
+* templates/guestbook_comment.html:
+  - fixed w3c validation error
+  
+* templates/latesttopics_content.html
+  - added language variables
+  
+* templates/myprofile_editmail.html
+  - removed double width entry
+  
+* templates/myprofile_editpwd.html
+  - removed double width entry
+  
+* templates/sc_partners.html:
+  - added possibility of text partners instead of images only
+  
+* version.php:
+  - raised version numbering
+
+
+### webSPELL Society Edition 4.2.1a ( 2009-07-30 ) rev.3398
+
+As this is the very first final release of the Society Edition there isn't much of a changelog.
+
+For those who are wondering about the high version number for an initial relase: it reflects the 
+version numbering of the regular E-Sports webSPELL version as all the bugfixes of the regular
+webSPELL 4.2.1a - as far as they are from any concern to the files of the Society Edition - have
+been ported to the Society Edition too.
+
+For those who want to know which changes have been made to each files compared to the regular 
+webSPELL version... just use a diff tool of your choice. Nearly every single file has been 
+changed including very massive changes. Also a lot of new files have been added to implement
+the additional features of the Society Edition.
+

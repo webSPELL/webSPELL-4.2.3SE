@@ -1,0 +1,131 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('short').value == "") {
+		alert("%enter_short%");
+		document.getElementById('short').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('title').value == "") {
+		alert("%enter_title%");
+		document.getElementById('title').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('dateinfo').value == "") {
+		alert("%enter_info%");
+		document.getElementById('dateinfo').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('dateinfo').value)){
+		return false;
+	}
+}
+
+function toggleformfields(){
+	if(document.getElementById('register_text').disabled==true){
+		document.getElementById('register_text').disabled=false;
+	}
+	else{
+		document.getElementById('register_text').disabled=true;
+	}
+	if(document.getElementById('registerfields').disabled==true){
+		document.getElementById('registerfields').disabled=false;
+	}
+	else{
+		document.getElementById('registerfields').disabled=true;
+	}
+	if(document.getElementById('register_max').disabled==true){
+		document.getElementById('register_max').disabled=false;
+	}
+	else{
+		document.getElementById('register_max').disabled=true;
+	}
+}
+-->
+</script>
+<form action="calendar.php?action=savedate" method="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr>
+    <td class="title" align="left" bgcolor="$bghead"><b>%new_date%</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%start_datetime%</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select>
+        -
+        <input name="hour" type="text" value="20" size="3" />
+        :
+        <input name="minute" type="text" value="00" size="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%end_datetime%</td>
+        <td><select name="endday">$day</select>
+        <select name="endmonth">$month</select>
+        <select name="endyear">$year</select>
+        -
+        <input name="endhour" type="text" value="20" size="3" />
+        :
+        <input name="endminute" type="text" value="00" size="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%shorttitle%</td>
+        <td><input name="short" id="short" type="text" size="35" />
+        <small>%displayed_in%</small></td>
+      </tr>
+      <tr>
+        <td align="right">%longtitle%</td>
+        <td><input name="title" id="title" type="text" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%location%</td>
+        <td><select name="country">$countries</select>
+        <input name="location" type="text" /></td>
+      </tr>
+      <tr>
+        <td align="right">%homepage%</td>
+        <td><input name="locationhp" type="text" value="http://" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" colspan="2">
+          <br />%information%:<br /><br />
+          <textarea name="message" id="dateinfo" cols="70" rows="10" style="width: 100%;"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" colspan="2">
+          <br />%register_flag%: <input name="register_flag" id="register_flag" type="checkbox" value="1" onclick="toggleformfields();" />
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+	        %register_max%
+	      </td>
+	      <td>
+	        <input type="text" name="register_max" id="register_max" size="3" disabled /><br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" colspan="2">
+	        %register_text%:<br /><br />
+	        <textarea name="register_text" id="register_text" cols="70" rows="10" style="width: 100%;" disabled></textarea><br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">%register_fields%</td>
+        <td>$registerfields</td>
+      </tr>
+      <tr><td align="right">&nbsp;</td></tr>
+      <tr>
+        <td colspan="2"><input name="post" type="submit" value="%save_event%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

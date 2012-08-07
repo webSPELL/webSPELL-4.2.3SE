@@ -1,0 +1,36 @@
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr>
+    <td colspan="2" bgcolor="$bghead" class="title"><b>%eventdetails%: $title</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right" width="25%">%start_datetime%</td>
+    <td bgcolor="$bg2" width="75%">$date - $time</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">%end_datetime%</td>
+    <td bgcolor="$bg4">$enddate - $endtime</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">%location%</td>
+    <td bgcolor="$bg2">$country $location</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="left" valign="top" colspan="2" style="text-align: justify;">
+    %information%:<br /><br />
+    $dateinfo
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="left" colspan="2">
+      $announce
+    </td>
+  </tr>
+  <tr bgcolor="$bgcat"><td colspan="2" align="right">$adminaction</td></tr>
+</table>
+<br />
+<div id="upcoming_$ds[upID]" style="display: none;">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  $annoucements
+  $registered_people
+</table>
+</div>

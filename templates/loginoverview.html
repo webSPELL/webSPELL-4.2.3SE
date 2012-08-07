@@ -1,0 +1,98 @@
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title" colspan="4"><b>%userinformations%</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" width="20%">%user%:</td>
+    <td bgcolor="$bg1" width="30%">$username</td>
+    <td bgcolor="$bg1" width="20%">%messenger%:</td>
+    <td bgcolor="$bg1"><a href="index.php?site=messenger">$newmessages</a></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1">%last_login%:</td>
+    <td bgcolor="$bg1">$lastlogin</td>
+    <td bgcolor="$bg1">%new_topics%:</td>
+    <td bgcolor="$bg1">$new_topics</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1">%registered%:</td>
+    <td bgcolor="$bg1">$registerdate</td>
+    <td bgcolor="$bg1">%new_posts%:</td>
+    <td bgcolor="$bg1">$new_posts</td>
+  </tr>
+  $referer_uri
+</table>
+<br />
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">  
+  <tr>
+    <td class="title" bgcolor="$bghead"><b>%upcoming%</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bgcat" align="center">
+    <table border="0" align="center" width="100%">
+      <tr>
+        <td colspan="3"><b>%upcoming_events%</b><br />&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center">
+        <table border="0" width="98%" cellpadding="2">
+          <tr>
+            <td><b>%name%:</b></td>
+            <td><b>%from%:</b></td>
+            <td><b>%until%:</b></td>
+            <td width="20%"><b>%location%:</b></td>
+            <td width="10%"><b>%info%:</b></td>
+          </tr>
+          $events
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<br />
+<!--<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title"><b>%usermenu%</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bgcat" align="center">
+    <table border="0" align="center">
+      <tr>
+      	<td>
+          <input type="button" value="%friends%" onclick="window.location='index.php?site=buddys'" />
+          <input type="button" value="%messenger%" onclick="window.location='index.php?site=messenger'" />
+          <input type="button" value="%myprofile%" onclick="window.location='index.php?site=myprofile'" />
+          $admincenterpic
+          <input type="button" value="%logout%" onclick="window.location='logout.php'" />	  
+      	</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<br />-->
+<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+  <tr>
+    <td class="title" bgcolor="$bghead"><b>%new_in_forum%</b></td>
+  </tr>
+  <tr>
+    <td width="50%" bgcolor="$bgcat">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr valign="top">
+        <td width="50%"><img src="images/icons/latest_topics.gif" alt="Latest Topics" border="0" /><br /><br />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          $topiclist
+        </table>
+        </td>
+        <td width="50%"><img src="images/icons/latest_posts.gif" alt="Latest Posts" border="0" /><br /><br />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          $postlist
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>

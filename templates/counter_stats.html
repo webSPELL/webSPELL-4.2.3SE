@@ -1,0 +1,107 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" valign="top">
+    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead"><b>%visits%</b></td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%today%</td>
+        <td width="65%" bgcolor="$bg2">$today</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%yesterday%</td>
+        <td width="65%" bgcolor="$bg4">$yesterday</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1">%this_month%</td>
+        <td bgcolor="$bg2">$month</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg3">%total%</td>
+        <td bgcolor="$bg4">$total</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead"><b>%this_month%</b></td>
+      </tr>
+      $monatsstat
+    </table>
+    <br />
+    </td>
+    <td width="4">&nbsp;</td>
+    <td width="50%" valign="top">
+    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead"><b>%online%</b></td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%now%</td>
+        <td width="65%" bgcolor="$bg2">$online ($user_on, $guests_on)</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg3">%maximum%</td>
+        <td bgcolor="$bg4">$maxonline</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1">%lasthour%</td>
+        <td bgcolor="$bg2">$online_lasthour</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead"><b>%total_statistic%</b></td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%daysonline%</td>
+        <td width="65%" bgcolor="$bg2">$days_online</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%visits_month%</td>
+        <td width="65%" bgcolor="$bg4">$permonth</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%visits_day%</td>
+        <td width="65%" bgcolor="$bg2">$perday</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%visits_hour%</td>
+        <td width="65%" bgcolor="$bg4">$perhour</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%max_day%</td>
+        <td width="65%" bgcolor="$bg2">$maxvisits</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead"><b>%user_statistic%</b></td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%avg_age%</td>
+        <td width="65%" bgcolor="$bg2">$avg_age_user</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%avg_age_clanmember%</td>
+        <td width="65%" bgcolor="$bg4">$avg_age_member</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%youngest_user%</td>
+        <td width="65%" bgcolor="$bg2"><a href='index.php?site=profile&amp;id=$get_young[userID]'>$get_young[nickname]</a> ($get_young[age] %years%)</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%oldest_user%</td>
+        <td width="65%" bgcolor="$bg4"><a href='index.php?site=profile&amp;id=$get_old[userID]'>$get_old[nickname]</a> ($get_old[age] %years%)</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%registered_users%</td>
+        <td width="65%" bgcolor="$bg2">$us</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
